@@ -156,6 +156,34 @@ const Index = () => {
         </div>
       </section>
 
+      {/* All Articles */}
+      <section className="py-16 px-4">
+        <div className="container mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Todos os <span className="text-brasil-blue">{articles.length} Artigos</span>
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Biblioteca completa sobre IA no Brasil — atualizada constantemente
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {articles.map((article) => (
+              <ArticleCard
+                key={article.id}
+                id={article.id}
+                title={article.title}
+                description={article.description}
+                readTime={article.readTime}
+                category={article.category}
+                publishDate={article.publishDate}
+                featured={article.featured}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Opportunities Section */}
       <section className="py-16 px-4">
         <div className="container mx-auto">
