@@ -1,4 +1,5 @@
 import { useParams } from "react-router-dom";
+import { useEffect } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import CTAButton from "@/components/CTAButton";
@@ -10,6 +11,14 @@ import { Badge } from "@/components/ui/badge";
 const Article = () => {
   const { id } = useParams<{ id: string }>();
   const article = id ? getArticleById(id) : null;
+
+  useEffect(() => {
+    if (article) {
+      document.title = `${article.title} | IA Trends Brasil`;
+      const meta = document.querySelector('meta[name="description"]');
+      if (meta) meta.setAttribute("content", article.metaDescription);
+    }
+  }, [article]);
 
   if (!article) {
     return (
