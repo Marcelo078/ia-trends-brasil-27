@@ -2,7 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ArticleCard from "@/components/ArticleCard";
 import CTAButton from "@/components/CTAButton";
-import { getFeaturedArticles } from "@/data/articles";
+import { getFeaturedArticles, articles } from "@/data/articles";
 import { TrendingUp, Brain, Zap, Shield, Sparkles, Target } from "lucide-react";
 
 const Index = () => {

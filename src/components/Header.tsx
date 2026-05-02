@@ -20,8 +20,12 @@ const Header = () => {
           <Link to="/" className="text-foreground hover:text-brasil-blue transition-colors">
             Início
           </Link>
-          
-          
+          <Link to="/categorias" className="text-foreground hover:text-brasil-blue transition-colors">
+            Categorias
+          </Link>
+          <Link to="/sobre" className="text-foreground hover:text-brasil-blue transition-colors">
+            Sobre
+          </Link>
           <Button asChild variant="default" className="bg-gradient-to-r from-brasil-orange to-brasil-yellow hover:from-brasil-yellow hover:to-brasil-orange transition-all duration-300">
             <a href="https://lovable.dev/?via=marcelo-barbosa" target="_blank" rel="noopener noreferrer">
               <Zap className="w-4 h-4 mr-2" />
